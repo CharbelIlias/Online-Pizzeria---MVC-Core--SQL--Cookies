@@ -1,0 +1,18 @@
+﻿@model ASPInlämningTvå_KarbelIlias.ViewModels.LoginVM
+
+<form asp-controller="WebShop" asp-action="LoginFromCheckOut" method="post">
+    <div class="well" id="wellLogin">
+        <div class="form-group">
+            <label asp-for="AnvandarNamn">Användarnamn:</label>
+            <input asp-for="AnvandarNamn" class="form-control" id="email" /><br />
+            <span asp-validation-for="AnvandarNamn"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Losenord">Lösenord:</label>
+            <input asp-for="Losenord" class="form-control" id="pwd" /><br />
+            <span asp-validation-for="Losenord"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Logga in</button>
+    </div>
+</form>

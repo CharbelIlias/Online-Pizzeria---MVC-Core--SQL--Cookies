@@ -1,0 +1,29 @@
+﻿@model ASPInlämningTvå_KarbelIlias.ViewModels.OrderVM
+
+<div class="well">
+
+    <h2 id="MatrattsRubrik">Tack för din beställning, @Model.kund.Namn!</h2><br /><br />
+    <h2>Du har beställt:</h2><br />
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th id="table">Vara</th>
+                <th id="table">Antal</th>
+                <th id="table">Pris</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.beställning.BestallningMatratt)
+            {
+                <tr>
+                    <td id="table">@item.Matratt.MatrattNamn</td>
+                    <td id="table">@item.Antal</td>
+                    <td id="table">@item.Matratt.Pris</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h1 id="MatrattsRubrik"> Totalbelopp: @Model.beställning.BestallningMatratt.Sum(x => x.Matratt.Pris * x.Antal) kr</h1>
+</div>

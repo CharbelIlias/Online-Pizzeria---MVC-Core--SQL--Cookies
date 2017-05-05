@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A1714CD-25F5-485F-AE14-03913BBABFE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16D4567B-BF1A-4BC5-AA9C-FC1D264BC8BE}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASPInlämningTvå_KarbelIlias", "src\ASPInlämningTvå_KarbelIlias\ASPInlämningTvå_KarbelIlias.xproj", "{B823E8EA-323C-4374-BA2D-247EB2672CC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B823E8EA-323C-4374-BA2D-247EB2672CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B823E8EA-323C-4374-BA2D-247EB2672CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B823E8EA-323C-4374-BA2D-247EB2672CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B823E8EA-323C-4374-BA2D-247EB2672CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B823E8EA-323C-4374-BA2D-247EB2672CC9} = {5A1714CD-25F5-485F-AE14-03913BBABFE4}
+	EndGlobalSection
+EndGlobal

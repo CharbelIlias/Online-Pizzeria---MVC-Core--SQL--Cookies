@@ -1,0 +1,30 @@
+﻿@model List<ASPInlämningTvå_KarbelIlias.ViewModels.MenuItemsVM>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.ajax.unobtrusive/3.2.4/jquery.unobtrusive-ajax.min.js"></script>
+
+<div class="well">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <h2 id="MatrattsRubrik">@item.Matratt.MatrattNamn</h2>
+                <h3>@item.Matratt.Beskrivning</h3>
+                <h4>Pris: @item.Matratt.Pris</h4><br />
+                <h4><b>Ingredienser</b></h4>
+
+                @foreach (var prod in item.Produkter)
+                {
+                    <h5>@prod.ProduktNamn</h5>
+                }
+
+                <a asp-controller="WebShop" class="btn btn-success" asp-action="AddToCart" asp-route-id="@item.Matratt.MatrattId"
+                   data-ajax="true" data-ajax-mode="GET" data-ajax-method="update" data-ajax-update="#CartView">Lägg till i varukorg</a>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="well">
+    <div class="container" id="CartView"></div>
+</div>

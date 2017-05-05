@@ -1,0 +1,18 @@
+﻿@model ASPInlämningTvå_KarbelIlias.Models.Kund
+
+<div class="panel panel-default">
+    <div class="panel-heading">Mina uppgifter</div>
+    <div class="panel-body">
+
+        <h3>@Model.Namn</h3><br />
+        <h3>@Model.Gatuadress</h3><br />
+        <h3>@Model.Postnr</h3><br />
+        <h3>@Model.Postort</h3><br />
+        <h3>@Model.Telefon</h3><br />
+        <h3>@Model.Email</h3><br />
+        <h3>@Model.Losenord</h3><br />
+
+    </div>
+
+    <a asp-controller="WebShop" asp-action="EditMyPage" asp-route-id=@Model.KundId class="btn btn-success" id="editButton">Ändra uppgifter</a>
+</div>

@@ -1,0 +1,25 @@
+﻿@model ICollection<ASPInlämningTvå_KarbelIlias.Models.BestallningMatratt>
+
+    <h2 id="MatrattsRubrik">Dina val:</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th id="table">Maträtt</th>
+                <th id="table">Antal</th>
+                <th id="table">Pris</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="table">@item.Matratt.MatrattNamn</td>
+                    <td id="table">@item.Antal</td>
+                    <td id="table">@item.Matratt.Pris</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h2 id="MatrattsRubrik">@Model.Sum(x => x.Matratt.Pris * x.Antal) kr</h2>
+
+    <a asp-controller="WebShop" asp-action="CheckOut" class="btn btn-success">Gå till kassan</a>
